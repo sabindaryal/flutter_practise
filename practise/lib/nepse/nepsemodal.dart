@@ -36,7 +36,9 @@ class LiveDatum {
         qty: json["qty"],
         previousClose: json["previous_close"],
         fullName: json["full_name"],
-        stockinfo: Stockinfo.fromJson(json["stockinfo"]),
+        stockinfo: Stockinfo.fromJson(
+          json["stockinfo"],
+        ),
       );
 
   Map<String, dynamic> toJson() => {

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:practise/others/second.dart';
+import 'package:practise/others/tabbar/second.dart';
 
 class firstPage extends StatefulWidget {
   const firstPage({Key? key}) : super(key: key);

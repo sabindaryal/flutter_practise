@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:practise/others/first.dart';
+import 'package:practise/bloc/bloc-first.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,8 +12,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: firstPage(),
-    );
+        debugShowCheckedModeBanner: false, home: blocPage());
   }
 }

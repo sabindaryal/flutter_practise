@@ -36,7 +36,9 @@ class _memePageState extends State<memePage> {
         title: const Center(child: Text('MEME')),
       ),
       body: SafeArea(
-          child: FutureBuilder(
+          child:
+          
+           FutureBuilder(
         future: getMeme(),
         builder: (context, snapshot) {
           if (!snapshot.hasData) {
@@ -58,6 +60,8 @@ class _memePageState extends State<memePage> {
           }
         },
       )),
+   
+   
     );
   }
 }

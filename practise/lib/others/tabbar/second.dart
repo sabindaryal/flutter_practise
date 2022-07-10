@@ -10,8 +10,13 @@ class SecondPage extends StatefulWidget {
 class _SecondPageState extends State<SecondPage> {
   @override
   Widget build(BuildContext context) {
-    return const Card(
-      child: Text('second page'),
+    return Card(
+      child: Column(children: const [
+        Text(
+          "Introduction hgghfghffffffffffffffffffffffffffffffffffffffffffto Very very very long text",
+        ),
+        Text('second page'),
+      ]),
     );
   }
 }

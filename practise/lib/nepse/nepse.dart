@@ -37,9 +37,14 @@ class _nepsePageState extends State<nepsePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey[800],
       appBar: AppBar(
+          backgroundColor: Colors.white,
           title: const Center(
-            child: Text('NEPSE'),
+            child: Text(
+              'NEPSE',
+              style: TextStyle(color: Colors.black),
+            ),
           ),
           actions: [
             IconButton(
@@ -49,8 +54,12 @@ class _nepsePageState extends State<nepsePage> {
                     delegate: CustomSearchDelegate(NepseData),
                   );
                 },
-                icon: const Icon(Icons.search)),
-          ]),
+                icon: const Icon(
+                  Icons.search,
+                  color: Colors.black,
+                )),
+          ]
+          ),
       body: SafeArea(
           child: FutureBuilder(
         future: getMeme(),
@@ -71,17 +80,35 @@ class _nepsePageState extends State<nepsePage> {
                             stockname: NepseData[index].fullName,
                             ltp: NepseData[index].ltp,
                             ltv: NepseData[index].ltv.toString(),
+                            symbol: NepseData[index].symbol,
+                            fullName: NepseData[index].fullName,
+                            percentChange:
+                                NepseData[index].percentChange.toString(),
+                            high: NepseData[index].high.toString(),
+                            low: NepseData[index].low.toString(),
+                            open: NepseData[index].open.toString(),
+                            qty: NepseData[index].qty.toString(),
+                            previousClose: NepseData[index].previousClose,
+                            stockinfo: NepseData[index].toString(),
                           );
                         })));
                       },
                       child: Card(
+                        color: Colors.grey[700],
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Padding(
                               padding: const EdgeInsets.all(8.0),
-                              child: Text(NepseData[index].fullName),
+                              child: Column(
+                                children: [
+                                  Text(
+                                    NepseData[index].fullName,
+                                    style: const TextStyle(color: Colors.white),
+                                  ),
+                                ],
+                              ),
                             ),
                           ],
                         ),

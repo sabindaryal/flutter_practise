@@ -59,6 +59,15 @@ class CustomSearchDelegate extends SearchDelegate {
                   stockname: matchQuery[index].fullName,
                   ltp: matchQuery[index].ltp,
                   ltv: matchQuery[index].ltv,
+                  symbol: matchQuery[index].symbol,
+                  fullName: matchQuery[index].fullName,
+                  percentChange: matchQuery[index].percentChange.toString(),
+                  high: matchQuery[index].high.toString(),
+                  low: matchQuery[index].low.toString(),
+                  open: matchQuery[index].open.toString(),
+                  qty: matchQuery[index].qty.toString(),
+                  previousClose: matchQuery[index].previousClose,
+                  stockinfo: matchQuery[index].toString(),
                 );
               })));
             },
@@ -88,6 +97,15 @@ class CustomSearchDelegate extends SearchDelegate {
                   stockname: matchQuery![index].fullName,
                   ltp: matchQuery[index].ltp,
                   ltv: matchQuery[index].ltv,
+                  symbol: matchQuery[index].symbol,
+                  fullName: matchQuery[index].fullName,
+                  percentChange: matchQuery[index].percentChange.toString(),
+                  high: matchQuery[index].high.toString(),
+                  low: matchQuery[index].low.toString(),
+                  open: matchQuery[index].open.toString(),
+                  qty: matchQuery[index].qty.toString(),
+                  previousClose: matchQuery[index].previousClose,
+                  stockinfo: matchQuery[index].toString(),
                 );
               })));
             },
